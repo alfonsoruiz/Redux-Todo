@@ -2,8 +2,9 @@ import React from 'react';
 
 const Todo = props => {
     return (
-        <div>
-            <h3>{props.todo.task}</h3>
+        <div className='Todo'>
+            <p>{props.todo}</p>
+            <button onClick={props.deleteTodo} className='delete-buttons'>X</button>
         </div>
     );
 }

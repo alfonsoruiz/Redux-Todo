@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import reducer from './reducers/reducer';
+import { reducer } from './reducers';
 
 import App from './App'
 
@@ -10,7 +10,7 @@ import App from './App'
 const store = createStore(reducer);
 
 ReactDOM.render(
-    // Provider wraps application to allow store to be distributed throughout app
+    // Provider wraps application to allow store to be distributed throughout UI of app
     <Provider store={store}>
         <App />
     </Provider>, 
