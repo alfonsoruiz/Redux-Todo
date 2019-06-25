@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addTodo, toggleComplete } from '../actions';
+import { addTodo, toggleComplete, deleteTodo } from '../actions';
 
 import Todo from './Todo';
 
@@ -24,7 +24,7 @@ class TodoList extends React.Component {
     }
 
     deleteTodo = (event, index) => {
-        console.log('deleteTodo called');
+        this.props.deleteTodo(index);
     };
 
     render() {
@@ -52,5 +52,5 @@ const mapStateToProps = (state) => {
 // Connect is a function and an HOC that takes in a component as an argument and returns a new component with state mapped to props for use within component. It also gets passed actions that get mapped to props for use within component
 export default connect(
     mapStateToProps, 
-    { addTodo, toggleComplete } //actions
+    { addTodo, toggleComplete, deleteTodo } //actions
 )(TodoList); // component passed into connect

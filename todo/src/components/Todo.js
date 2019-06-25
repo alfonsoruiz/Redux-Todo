@@ -6,7 +6,7 @@ const Todo = props => {
             <p className={props.todo.complete ? 'complete' : ''} onClick={event => props.toggleComplete(event, props.index)}>
                 {props.todo.task}
             </p>
-            <button onClick={props.deleteTodo} className='delete-buttons'>X</button>
+            <button onClick={event => props.deleteTodo(event, props.index)} className='delete-buttons'>X</button>
         </div>
     );
 };
