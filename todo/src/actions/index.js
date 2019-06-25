@@ -12,7 +12,6 @@ export const addTodo = (todo) => {
 };
 
 export const toggleComplete = (index) => {
-    console.log(`Toggling todo item number ${index + 1}`);
     return {
         type: TOGGLE_COMPLETE,
         payload: index

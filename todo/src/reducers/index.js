@@ -3,10 +3,8 @@ import { ADD_TODO, TOGGLE_COMPLETE } from '../actions';
 
 // Takes in initial state tree from reducer
 const initialState = {
-    todos: [
-        {task: 'Clean Ruperts litter box', complete: true},
-        {task: 'Take trash out', complete: false}
-    ]
+    todos: []
+    // {task: 'Clean Ruperts litter box', complete: true},
 };
 
 export const reducer = (state = initialState, action) => {
