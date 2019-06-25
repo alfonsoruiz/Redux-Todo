@@ -53,6 +53,7 @@ p {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .Todo:hover .delete-buttons {
@@ -72,4 +73,9 @@ p {
     margin-left: 30px;
     cursor: pointer;
     outline: none;
+}
+
+.complete {
+    text-decoration: line-through;
+    color: lightgrey;
 }
